@@ -1,0 +1,25 @@
+group 'com.josiahebhomenye'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "com.josiahebhomenye.music.Main"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.16'
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.9.Final'
+    compile name: 'mp3spi1.9.5'
+    compile name: 'jl1.0.1'
+    compile name: 'tritonus_share'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
